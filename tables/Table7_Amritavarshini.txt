@@ -1,0 +1,10 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+51. Kamavardhini	0.361	0.417	0.161	0.185
+53. Gamanashrama	0.546	0.488	0.195	0.221
+54. Vishwambari	0.408	0.46	0.197	0.225
+63. Latangi	0.352	0.427	0.172	0.191
+65. Kalyani	0.316	0.382	0.136	0.154
+66. Chitrambari(*)	0.457	0.53	0.265	0.293
+69. Datuvardhini	0.503	0.42	0.162	0.189
+71. Kosala	0.291	0.33	0.1	0.116
+72. Rasikapriya	0.3	0.371	0.127	0.148

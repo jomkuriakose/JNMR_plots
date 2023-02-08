@@ -1,0 +1,5 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+20. Natabhairavi	0.373	0.301	0.082	0.099
+22. Kharaharapriya(*)	0.378	0.327	0.098	0.114
+26. Charukeshi	0.612	0.589	0.331	0.361
+28. Harikambhoji	0.558	0.534	0.265	0.302
