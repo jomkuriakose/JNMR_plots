@@ -32,13 +32,13 @@ import matplotlib.colors as mcolors
 # Raga_name = "Revati"
 # parent_lab = "(*)"
 
-filename = 'tables/Table6_Hamsadwani.txt'
-Raga_name = "Hamsadwani"
-parent_lab = "(*)"
+# filename = 'tables/Table6_Hamsadwani.txt'
+# Raga_name = "Hamsadwani"
+# parent_lab = "(*)"
 
-# filename = 'tables/Table7_Gambhiranata.txt'
-# Raga_name = "Gambhiranata"
-# parent_lab = "(**)"
+filename = 'tables/Table7_Gambhiranata.txt'
+Raga_name = "Gambhiranata"
+parent_lab = "(**)"
 
 # filename = 'tables/Table7_Amritavarshini.txt'
 # Raga_name = "Amritavarshini"
@@ -65,10 +65,11 @@ barWidth = 0.10
 # bbox_shift = [1, 1]
 
 # set height and width of figure
-height = 6
+height = 4
+# height = 6
 # width = 6
-width = 8
-# width = 12
+# width = 8
+width = 12
 
 # ----------------------------------------------------------------
 
@@ -165,11 +166,11 @@ if __name__ == '__main__':
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_color')
 
         # normalized plots
-        # ylim = [0,1]
-        ylim = None
+        ylim = [0.3,1.01]
+        # ylim = None
         legend_size = 6
-        legend_position = 'upper center'
-        bbox_shift = [0.21, 1.01]
+        # legend_position = 'upper center'
+        # bbox_shift = [0.21, 1.01]
         color_flag = False
         plot_hline = True
 
