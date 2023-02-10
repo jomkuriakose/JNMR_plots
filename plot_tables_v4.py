@@ -12,9 +12,9 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-filename = 'tables/Table5_Hindola.txt'
-Raga_name = "Hindola"
-parent_lab = "(*)"
+# filename = 'tables/Table5_Hindola.txt'
+# Raga_name = "Hindola"
+# parent_lab = "(*)"
 
 # filename = 'tables/Table5_Sunadavinodini.txt'
 # Raga_name = "Sunadavinodini"
@@ -32,9 +32,9 @@ parent_lab = "(*)"
 # Raga_name = "Revati"
 # parent_lab = "(*)"
 
-# filename = 'tables/Table6_Hamsadwani.txt'
-# Raga_name = "Hamsadwani"
-# parent_lab = "(*)"
+filename = 'tables/Table6_Hamsadwani.txt'
+Raga_name = "Hamsadwani"
+parent_lab = "(*)"
 
 # filename = 'tables/Table7_Gambhiranata.txt'
 # Raga_name = "Gambhiranata"
@@ -58,16 +58,16 @@ bbox_shift = None
 plot_hline = False
 
 # set width of bar
-barWidth = 0.15
+# barWidth = 0.15
 # barWidth = 0.12
-# barWidth = 0.10
+barWidth = 0.10
 # barWidth = 0.08
 # bbox_shift = [1, 1]
 
 # set height and width of figure
 height = 6
-width = 6
-# width = 8
+# width = 6
+width = 8
 # width = 12
 
 # ----------------------------------------------------------------
@@ -169,7 +169,7 @@ if __name__ == '__main__':
         ylim = None
         legend_size = 6
         legend_position = 'upper center'
-        bbox_shift = [0.52, 0.99]
+        bbox_shift = [0.21, 1.01]
         color_flag = False
         plot_hline = True
 
