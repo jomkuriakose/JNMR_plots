@@ -1,0 +1,7 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+27. Sarasangi	0.328	0.318	0.092	0.109
+29. Shankarabharana(*)	0.362	0.364	0.122	0.142
+30. Naganandhini	0.295	0.298	0.080	0.096
+63. Latangi	0.312	0.322	0.095	0.111
+65. Kalyani(**)	0.206	0.224	0.045	0.055
+66. Chitrambari	0.303	0.363	0.122	0.140
