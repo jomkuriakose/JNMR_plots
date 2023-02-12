@@ -1,0 +1,3 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+40. Navaneetham	0.329	0.353	0.114	0.133
+41. Pavani(*)	0.386	0.320	0.093	0.111

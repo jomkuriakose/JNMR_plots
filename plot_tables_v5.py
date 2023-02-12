@@ -12,45 +12,9 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-# filename = 'tables/Table3_Aarabhi.txt'
-# Raga_name = "Aarabhi"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Khamboji.txt'
-# Raga_name = "Khamboji"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Anandabhairavi.txt'
-# Raga_name = "Anandabhairavi"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Begada.txt'
-# Raga_name = "Begada"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Khamas.txt'
-# Raga_name = "Khamas"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table4_Sriranjani.txt'
-# Raga_name = "Sriranjani"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table4_Chandrajyoti.txt'
-# Raga_name = "Chandrajyoti"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table4_Malahari.txt'
-# Raga_name = "Malahari"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table5_Hindola.txt'
-# Raga_name = "Hindola"
-# parent_lab = "(*)"
+filename = 'tables/Table5_Hindola.txt'
+Raga_name = "Hindola"
+parent_lab = "(*)"
 
 # filename = 'tables/Table5_Sunadavinodini.txt'
 # Raga_name = "Sunadavinodini"
@@ -64,8 +28,6 @@ import matplotlib.colors as mcolors
 # Raga_name = "Mohana"
 # parent_lab = "(*)"
 
-# ----------------------------------------------------------------
-
 # filename = 'tables/Table6_Revati.txt'
 # Raga_name = "Revati"
 # parent_lab = "(*)"
@@ -73,8 +35,6 @@ import matplotlib.colors as mcolors
 # filename = 'tables/Table6_Hamsadwani.txt'
 # Raga_name = "Hamsadwani"
 # parent_lab = "(*)"
-
-# ----------------------------------------------------------------
 
 # filename = 'tables/Table7_Gambhiranata.txt'
 # Raga_name = "Gambhiranata"
@@ -142,8 +102,6 @@ def read_table(filename):
                 norm_janaka_list[janaka_list_keys[i]] = list(janaka_arr[i])
         return janaka_list, norm_janaka_list
 
-# ----------------------------------------------------------------
-
 def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, file_name):
 
         fig = plt.subplots(figsize =(width, height))
@@ -198,8 +156,6 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
         final_fig.savefig(file_name+".png", bbox_inches="tight", dpi=300)
         plt.close()
 
-# ----------------------------------------------------------------
-
 if __name__ == '__main__':
         print(filename)
         janaka_list, norm_janaka_list = read_table(filename)
@@ -227,19 +183,3 @@ if __name__ == '__main__':
         plot_figure(barWidth, height, width, sym_list, color_list, color_flag, norm_janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_norm')
         color_flag = True
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, norm_janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_norm_color')
-
-        # normalized plots
-        ylim = [0.0,1.4]
-        # ylim = None
-        legend_size = 6
-        # legend_position = 'upper center'
-        legend_position = 'upper right'
-        bbox_shift = [1.003, 1.01]
-        # bbox_shift = [1.01, 1.01]
-        color_flag = False
-        plot_hline = True
-
-        plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm')
-        color_flag = True
-        plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm_color')
-
