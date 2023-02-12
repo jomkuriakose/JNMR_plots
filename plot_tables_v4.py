@@ -12,9 +12,9 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-# filename = 'tables/Table5_Hindola.txt'
-# Raga_name = "Hindola"
-# parent_lab = "(*)"
+filename = 'tables/Table5_Hindola.txt'
+Raga_name = "Hindola"
+parent_lab = "(*)"
 
 # filename = 'tables/Table5_Sunadavinodini.txt'
 # Raga_name = "Sunadavinodini"
@@ -36,9 +36,9 @@ import matplotlib.colors as mcolors
 # Raga_name = "Hamsadwani"
 # parent_lab = "(*)"
 
-filename = 'tables/Table7_Gambhiranata.txt'
-Raga_name = "Gambhiranata"
-parent_lab = "(**)"
+# filename = 'tables/Table7_Gambhiranata.txt'
+# Raga_name = "Gambhiranata"
+# parent_lab = "(**)"
 
 # filename = 'tables/Table7_Amritavarshini.txt'
 # Raga_name = "Amritavarshini"
@@ -51,30 +51,32 @@ ylim = None
 # ylim = [0,0.6]
 # ylim = [0,1]
 
-legend_size = 10
+legend_size = 8
 legend_position = 'best'
 # legend_position = 'upper right'
 bbox_shift = None
 plot_hline = False
 
 # set width of bar
+barWidth = 0.18
 # barWidth = 0.15
 # barWidth = 0.12
-barWidth = 0.10
+# barWidth = 0.10
 # barWidth = 0.08
 # bbox_shift = [1, 1]
 
 # set height and width of figure
 height = 4
 # height = 6
-# width = 6
+width = 6
 # width = 8
-width = 12
+# width = 10
+# width = 12
 
 # ----------------------------------------------------------------
 
-sym_list = [".","//","o","\\","*","xx","..",".O","++"]
-color_list = ["gray","darkgray","dimgray","lightgray","slategrey","grey","darkgrey","dimgrey","lightgrey"]
+sym_list = [".","//","o","\\","x","..","xx",".O","++"]
+color_list = ["gainsboro","gray","darkgray","dimgray","lightgray","grey","darkgrey","dimgrey","lightgrey"]
 color_list_new = list(mcolors.TABLEAU_COLORS.values())
 
 # ----------------------------------------------------------------
@@ -115,9 +117,11 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
         sym_counter = 0
 
         if plot_hline:
-                plt.axhline(y=1.0, color='grey', linestyle='--')
-                plt.axhline(y=0.6, color='grey', linestyle='--')
-                plt.axhline(y=0.2, color='grey', linestyle='--')
+                # hline_loc = [1.0, 0.8, 0.6, 0.4, 0.2]
+                # hline_loc = [1.0, 0.7, 0.4]
+                hline_loc = [1.0, 0.6, 0.2]
+                for i in range(0,len(hline_loc)):
+                        plt.axhline(y=hline_loc[i], color='grey', linestyle='--')
 
         # Make the plot
         for i in range(0,len(janaka_list)):
@@ -166,11 +170,13 @@ if __name__ == '__main__':
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_color')
 
         # normalized plots
-        ylim = [0.3,1.01]
+        ylim = [0.0,1.4]
         # ylim = None
         legend_size = 6
         # legend_position = 'upper center'
-        # bbox_shift = [0.21, 1.01]
+        legend_position = 'upper right'
+        bbox_shift = [1.003, 1.01]
+        # bbox_shift = [1.01, 1.01]
         color_flag = False
         plot_hline = True
 
