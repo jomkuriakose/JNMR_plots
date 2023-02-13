@@ -12,9 +12,9 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-# filename = 'tables/Table3_Aarabhi.txt'
-# Raga_name = "Aarabhi"
-# parent_lab = "(*)"
+filename = 'tables/Table3_Aarabhi.txt'
+Raga_name = "Aarabhi"
+parent_lab = "(*)"
 
 # filename = 'tables/Table3_Khamboji.txt'
 # Raga_name = "Khamboji"
