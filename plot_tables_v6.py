@@ -18,9 +18,9 @@ import matplotlib.colors as mcolors
 # Raga_name = "Chandrajyoti"
 # parent_lab = "(*)"
 
-filename = 'tables_pallavi/Table_Malahari.txt'
-Raga_name = "Malahari"
-parent_lab = "(*)"
+# filename = 'tables_pallavi/Table_Malahari.txt'
+# Raga_name = "Malahari"
+# parent_lab = "(*)"
 
 # ----------------------------------------------------------------
 
