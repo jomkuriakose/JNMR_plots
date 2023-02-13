@@ -1,0 +1,5 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+2. Rathnangi(*)	0.378	0.469	0.204	0.234
+4. Vanaspati	0.320	0.473	0.211	0.234
+8. Hanumatodi	0.331	0.408	0.154	0.177
+14. Vakulabharana	0.341	0.446	0.187	0.209

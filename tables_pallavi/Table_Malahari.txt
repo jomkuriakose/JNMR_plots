@@ -1,0 +1,4 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+13. Gayakapriya	0.516	0.509	0.241	0.275
+14. Vakulabharana	0.252	0.340	0.106	0.124
+15. Mayamalavagowla(*)	0.283	0.343	0.108	0.126

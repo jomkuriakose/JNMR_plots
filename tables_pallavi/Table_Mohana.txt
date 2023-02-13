@@ -1,0 +1,4 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+28. Harikambhoji(*)	0.270	0.310	0.088	0.103
+29. Shankarabharana	0.292	0.425	0.172	0.189
+65. Kalyani	0.179	0.237	0.051	0.061

@@ -1,0 +1,4 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+29. Shankarabharana(*)	0.306	0.455	0.200	0.213
+65. Kalyani(**)	0.295	0.332	0.101	0.119
+66. Chitrambari	0.281	0.416	0.163	0.181

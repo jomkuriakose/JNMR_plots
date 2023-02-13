@@ -1,0 +1,5 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+27. Sarasangi	0.396	0.408	0.154	0.178
+29. Shankarabharana(**)	0.367	0.600	0.361	0.360
+35. Shulini	0.215	0.302	0.084	0.098
+36. Chalanata(*)	0.259	0.358	0.120	0.136
