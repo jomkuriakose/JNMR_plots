@@ -12,13 +12,13 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-filename = 'tables/Table0_Test.txt'
-Raga_name = None
-parent_lab = "(*)"
-
-# filename = 'tables/Table3and4.txt'
+# filename = 'tables/Table0_Test.txt'
 # Raga_name = None
 # parent_lab = "(*)"
+
+filename = 'tables/Table3and4.txt'
+Raga_name = None
+parent_lab = "(*)"
 
 # filename = 'tables/Table3_Aarabhi.txt'
 # Raga_name = "Aarabhi"
@@ -99,7 +99,7 @@ ylim = None
 # ylim = [0,0.6]
 # ylim = [0,1]
 
-legend_size = 8
+legend_size = 10
 legend_position = 'best'
 # legend_position = 'upper right'
 bbox_shift = None
@@ -228,11 +228,11 @@ if __name__ == '__main__':
         # normalized plots
         ylim = [0.0,1.4]
         # ylim = None
-        legend_size = 6
+        legend_size = 9
         # legend_position = 'upper center'
         legend_position = 'upper right'
-        bbox_shift = [1.003, 1.01]
-        # bbox_shift = [1.01, 1.01]
+        # bbox_shift = [1.003, 1.01]
+        bbox_shift = [1.0, 1.0]
         color_flag = False
         plot_hline = True
 
@@ -243,11 +243,11 @@ if __name__ == '__main__':
         # normalized plots
         ylim = [0.0,1.4]
         # ylim = None
-        legend_size = 6
+        legend_size = 10
         # legend_position = 'upper center'
         legend_position = 'upper right'
-        bbox_shift = [1.003, 1.01]
-        # bbox_shift = [1.01, 1.01]
+        # bbox_shift = [1.003, 1.01]
+        bbox_shift = [1.0, 1.0]
         color_flag = False
         plot_hline = True
 
