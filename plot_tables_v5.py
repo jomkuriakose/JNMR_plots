@@ -99,7 +99,7 @@ ylim = None
 # ylim = [0,0.6]
 # ylim = [0,1]
 
-legend_size = 10
+legend_size = 12
 legend_position = 'best'
 # legend_position = 'upper right'
 bbox_shift = None
@@ -154,7 +154,7 @@ def read_table(filename):
 
 def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, file_name):
 
-        fig = plt.subplots(figsize =(width, height))
+        fig, ax = plt.subplots(figsize =(width, height))
 
         # Set position of bar on X axis
         br_list = []
@@ -187,15 +187,25 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
                 sym_counter += 1
         
         if not Raga_name == None:
-                plt.title(f'Distance of Raga {Raga_name} with Parent Ragas', fontweight ='bold', fontsize = 10)
+                plt.title(f'Distance of Raga {Raga_name} with Parent Ragas', fontweight ='bold', fontsize = 12)
         else:
-                plt.title(f'Distance of Janya Ragas with Parent Ragas', fontweight ='bold', fontsize = 10)
+                plt.title(f'Distance of Janya Ragas with Parent Ragas', fontweight ='bold', fontsize = 12)
         # Adding Xticks
         
-        plt.xlabel('Janya Raga and Janaka Raga', fontweight ='bold', fontsize = 10)
-        plt.ylabel('Distance Value', fontweight ='bold', fontsize = 10)
+        plt.xlabel('Janya Raga', fontweight ='bold', fontsize = 12)
+        plt.ylabel('Distance Value', fontweight ='bold', fontsize = 12)
         # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya-Hellinger\nDistance", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 8)
-        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Janya: Aarabhi\nJanaka: 29. Shankarabharana", f"Janya: Khamboji\nJanaka: 28. Harikambhoji", f"Janya: Begada\nJanaka: 29. Shankarabharana", f"Janya: Khamas\nJanaka: 28. Harikambhoji", f"Janya: Sriranjani\nJanaka: 22. Kharaharapriya"], fontsize = 8)
+        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Janya: Aarabhi\nJanaka: 29. Shankarabharana", f"Janya: Khamboji\nJanaka: 28. Harikambhoji", f"Janya: Begada\nJanaka: 29. Shankarabharana", f"Janya: Khamas\nJanaka: 28. Harikambhoji", f"Janya: Sriranjani\nJanaka: 22. Kharaharapriya"], fontsize = 10)
+        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Janya:\nAarabhi\nJanaka:\n29. Shankarabharana", f"Janya:\nKhamboji\nJanaka:\n28. Harikambhoji", f"Janya:\nBegada\nJanaka:\n29. Shankarabharana", f"Janya:\nKhamas\nJanaka:\n28. Harikambhoji", f"Janya:\nSriranjani\nJanaka:\n22. Kharaharapriya"], fontsize = 12)
+        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Aarabhi", f"Khamboji", f"Begada", f"Khamas", f"Sriranjani"], fontsize = 12)
+
+        textstr_list = [f"29. Shankarabharana", f"28. Harikambhoji", f"29. Shankarabharana", f"28. Harikambhoji", f"22. Kharaharapriya"]
+        props = dict(boxstyle='square', facecolor='white', alpha=0.5)
+        # box_locs = [r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))]
+        box_locs = [0.01, 0.2, 0.4, 0.62, 0.8]
+        v_locs = [0.5, 0.35, 0.3, 0.26, 0.32]
+        for idx in range(0,len(box_locs)):
+                plt.text(box_locs[idx], v_locs[idx], textstr_list[idx], transform=ax.transAxes, fontsize=12, verticalalignment='top', bbox=props)
 
         if ylim:
                 plt.ylim(ylim[0], ylim[1])
@@ -228,7 +238,7 @@ if __name__ == '__main__':
         # normalized plots
         ylim = [0.0,1.4]
         # ylim = None
-        legend_size = 9
+        legend_size = 12
         # legend_position = 'upper center'
         legend_position = 'upper right'
         # bbox_shift = [1.003, 1.01]
@@ -243,7 +253,7 @@ if __name__ == '__main__':
         # normalized plots
         ylim = [0.0,1.4]
         # ylim = None
-        legend_size = 10
+        legend_size = 12
         # legend_position = 'upper center'
         legend_position = 'upper right'
         # bbox_shift = [1.003, 1.01]
