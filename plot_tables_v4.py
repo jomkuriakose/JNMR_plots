@@ -20,9 +20,9 @@ import matplotlib.colors as mcolors
 # Raga_name = "Khamboji"
 # parent_lab = "(*)"
 
-# filename = 'tables/Table3_Anandabhairavi.txt'
-# Raga_name = "Anandabhairavi"
-# parent_lab = "(*)"
+filename = 'tables/Table3_Anandabhairavi.txt'
+Raga_name = "Anandabhairavi"
+parent_lab = "(*)"
 
 # filename = 'tables/Table3_Begada.txt'
 # Raga_name = "Begada"
@@ -108,8 +108,9 @@ barWidth = 0.15
 # set height and width of figure
 height = 4
 # height = 6
+width = 5
 # width = 6
-width = 8
+# width = 8
 # width = 10
 # width = 12
 
@@ -184,7 +185,8 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
         plt.xlabel('Distance Metric', fontweight ='bold', fontsize = 12)
         plt.ylabel('Distance Value', fontweight ='bold', fontsize = 12)
         # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya-Hellinger\nDistance", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 12)
-        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya\nHellinger", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 12)
+        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya\nHellinger", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 12)
+        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya\nHellinger", f"D(kld)\nKL\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 12)
 
         if ylim:
                 plt.ylim(ylim[0], ylim[1])
