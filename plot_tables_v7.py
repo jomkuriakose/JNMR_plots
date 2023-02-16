@@ -2,7 +2,7 @@
 Code to plot tables to normalized bar plot
 JNMR paper tables
 
-Histogram plots of pallavi tables
+Histogram plots of LCSS tables
 
 Author: Jom Kuriakose
 """

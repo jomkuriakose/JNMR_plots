@@ -2,6 +2,8 @@
 Code to plot tables to normalized bar plot
 JNMR paper tables
 
+Histogram plots of single parent ragas
+
 Author: Jom Kuriakose
 """
 
