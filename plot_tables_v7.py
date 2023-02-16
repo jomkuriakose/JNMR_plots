@@ -14,53 +14,8 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-# ----------------------------------------------------------------
-
-# filename = 'tables_pallavi/Table_Chandrajyoti.txt'
-# Raga_name = "Chandrajyoti"
-# parent_lab = "(*)"
-
-# filename = 'tables_pallavi/Table_Malahari.txt'
-# Raga_name = "Malahari"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables_pallavi/Table_Hindola.txt'
-# Raga_name = "Hindola"
-# parent_lab = "(*)"
-
-# filename = 'tables_pallavi/Table_Sunadavinodini.txt'
-# Raga_name = "Sunadavinodini"
-# parent_lab = "(*)"
-
-# filename = 'tables_pallavi/Table_Madhyamavati.txt'
-# Raga_name = "Madhyamavati"
-# parent_lab = "(*)"
-
-# filename = 'tables_pallavi/Table_Mohana.txt'
-# Raga_name = "Mohana"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables_pallavi/Table_Revati.txt'
-# Raga_name = "Revati"
-# parent_lab = "(*)"
-
-# filename = 'tables_pallavi/Table_Hamsadwani.txt'
-# Raga_name = "Hamsadwani"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables_pallavi/Table_Gambhiranata.txt'
-# Raga_name = "Gambhiranata"
-# parent_lab = "(**)"
-
-# filename = 'tables_pallavi/Table_Amritavarshini.txt'
-# Raga_name = "Amritavarshini"
-# parent_lab = "(*)"
+filename = 'tables_lcss/Table1_LCSS.txt'
+parent_lab = "(*)"
 
 # ----------------------------------------------------------------
 
@@ -99,42 +54,28 @@ color_list_new = list(mcolors.TABLEAU_COLORS.values())
 
 # ----------------------------------------------------------------
 
-def read_table(filename):
+def read_table_lcss(filename):
         with open(filename, 'r') as fid:
                 file_data = fid.readlines()
         janaka_list = {}
-        norm_janaka_list = {}
-        janaka_arr = []
         for i in range(len(file_data)):
-                if i == 0:
-                        pass
-                else:
-                        line = file_data[i].strip().split('\t')
-                        janaka_list[line[0].strip()] = [float(j) for j in line[1:]]
-                        janaka_arr.append([float(j) for j in line[1:]])
-        janaka_arr = np.array(janaka_arr)
-        # normalize by the max value in each column
-        janaka_arr = janaka_arr / janaka_arr.max(axis=0)
-        janaka_list_keys = list(janaka_list.keys())
-        for i in range(0,len(janaka_list_keys)):
-                norm_janaka_list[janaka_list_keys[i]] = list(janaka_arr[i])
-        return janaka_list, norm_janaka_list
+                line = file_data[i].strip().split('\t')
+                janya_name = line[0].strip()
+                janaka_list[janya_name] = {}
+                for j in range(0, int(line[1])):
+                        if "Janaka_list" in janaka_list[janya_name].keys():
+                                janaka_list[janya_name]["Janaka_list"].append(line[(j+1)*2])
+                                janaka_list[janya_name]["LCSS_dist"].append(float(line[((j+1)*2)+1]))
+                        else:
+                                janaka_list[janya_name]["Janaka_list"] = [line[(j+1)*2]]
+                                janaka_list[janya_name]["LCSS_dist"] = [float(line[((j+1)*2)+1])]
+        return janaka_list
 
 # ----------------------------------------------------------------
 
-def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, file_name):
+def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, ylim, legend_size, legend_position, bbox_shift, plot_hline, file_name):
 
         fig = plt.subplots(figsize =(width, height))
-
-        # Set position of bar on X axis
-        br_list = []
-        for i in range(0,len(janaka_list)):
-                if i == 0:
-                        br_list.append(np.arange(len(janaka_list[list(janaka_list.keys())[0]])))
-                else:
-                        br_list.append([x + barWidth for x in br_list[i-1]])
-        
-        sym_counter = 0
 
         if plot_hline:
                 # hline_loc = [1.0, 0.8, 0.6, 0.4, 0.2]
@@ -142,6 +83,14 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
                 hline_loc = [1.0, 0.6, 0.2]
                 for i in range(0,len(hline_loc)):
                         plt.axhline(y=hline_loc[i], color='grey', linestyle='--')
+
+        # Set position of bar on X axis
+        xaxis_list = []
+        for i in range(0,len(janaka_list)):
+                for j in range():
+                        # 
+        
+        sym_counter = 0
 
         # Make the plot
         for i in range(0,len(janaka_list)):
@@ -156,7 +105,7 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
                                         barlist[j].set_hatch(sym_list[sym_counter])
                 sym_counter += 1
         
-        plt.title(f'Distance of Raga {Raga_name} with Parent Ragas', fontweight ='bold', fontsize = 12)
+        plt.title(f'LCSS Distance of Janya Ragas with Janaka Ragas', fontweight ='bold', fontsize = 12)
         # Adding Xticks
         
         plt.xlabel('Distance Metric', fontweight ='bold', fontsize = 12)
@@ -180,32 +129,16 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
 
 if __name__ == '__main__':
         print(filename)
-        janaka_list, norm_janaka_list = read_table(filename)
+        janaka_list = read_table_lcss(filename)
         print(janaka_list.keys())
         file_name = os.path.splitext(os.path.basename(filename))
         print(file_name[0])
 
         # not normalized
         color_flag = False
-        plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0])
+        plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0])
         color_flag = True
-        plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_color')
-
-        # normalized plots
-        ylim = [0.0,1.0]
-        # ylim = None
-        legend_size = 12
-        # legend_position = 'upper center'
-        legend_position = 'upper right'
-        # bbox_shift = [1.003, 1.01]
-        bbox_shift = [1.0, 1.0]
-        # bbox_shift = [1.2, 1.0]
-        color_flag = False
-        plot_hline = True
-
-        plot_figure(barWidth, height, width, sym_list, color_list, color_flag, norm_janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_norm')
-        color_flag = True
-        plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, norm_janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_norm_color')
+        plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_color')
 
         # normalized plots
         ylim = [0.0,1.0]
@@ -219,7 +152,7 @@ if __name__ == '__main__':
         color_flag = False
         plot_hline = True
 
-        plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm')
+        plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm')
         color_flag = True
-        plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm_color')
+        plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm_color')
 
