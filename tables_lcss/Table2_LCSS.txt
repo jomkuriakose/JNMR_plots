@@ -1,0 +1,3 @@
+Sriranjani	1	22. Kharaharapriya(*)	0.248
+Chandrajyoti	2	40. Navaneetham	0.195	41. Pavani(*)	0.256
+Malahari	3	13. Gayakapriya	0.218	14. Vakulabharana	0.159	15. Mayamalavagowla(*)	0.224

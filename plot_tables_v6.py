@@ -151,6 +151,7 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
                         barlist = plt.bar(br_list[i], janaka_list[raga_label], color = 'black', width = barWidth, edgecolor ='gray', label = raga_label)
                 else:
                         barlist = plt.bar(br_list[i], janaka_list[raga_label], color = color_list[i], width = barWidth, edgecolor ='black', label = raga_label)
+                        # print(f"barlist: {barlist}")
                         if not color_flag:
                                 for j in range(0, len(barlist)):
                                         barlist[j].set_hatch(sym_list[sym_counter])

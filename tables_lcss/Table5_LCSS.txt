@@ -1,0 +1,2 @@
+Gambhiranata	9	15. Mayamalavagowla	0.398	17. Sooryakanta	0.310	18. Hatakambari	0.273	27. Sarasangi	0.379	29. Shankarabharana(*)	0.417	30. Naganandhini	0.344	33. Gangeyabhushani	0.342	35. Shulini	0.304	36. Chalanata(**)	0.408
+Amritavarshini	9	51. Kamavardhini	0.214	53. Gamanashrama	0.334	54. Vishwambari	0.165	63. Latangi	0.179	65. Kalyani	0.182	66. Chitrambari(*)	0.198	69. Datuvardhini	0.125	71. Kosala	0.248	72. Rasikapriya	0.295

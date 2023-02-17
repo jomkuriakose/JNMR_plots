@@ -1,0 +1,4 @@
+Hindola	2	8. Hanumatodi	0.247	20. Natabhairavi(*)	0.211
+Sunadavinodini	3	53. Gamanashrama	0.210	65. Kalyani(*)	0.143	71. Kosala	0.159
+Madhyamavati	4	20. Natabhairavi	0.168	22. Kharaharapriya(*)	0.217	26. Charukeshi	0.101	28. Harikambhoji	0.197
+Mohana	4	28. Harikambhoji(*)	0.390	29. Shankarabharana	0.338	64. Vachaspathi	0.249	65. Kalyani	0.250

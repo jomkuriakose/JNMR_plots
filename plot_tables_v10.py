@@ -14,7 +14,7 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-filename = 'tables_lcss/Table1_LCSS.txt'
+filename = 'tables_lcss/Table4_LCSS.txt'
 parent_lab = "(*)"
 
 # ----------------------------------------------------------------
@@ -30,22 +30,23 @@ legend_position = 'best'
 bbox_shift = None
 plot_hline = False
 
-between_bar_width = 0.5
+between_bar_width = 0.1
 
 # set width of bar
 # barWidth = 0.18
 # barWidth = 0.15
 # barWidth = 0.12
-barWidth = 0.10
+# barWidth = 0.10
 # barWidth = 0.08
+barWidth = 0.01
 # bbox_shift = [1, 1]
 
 # set height and width of figure
 height = 4
 # height = 6
 # width = 6
-# width = 8
-width = 10
+width = 8
+# width = 10
 # width = 12
 
 # ----------------------------------------------------------------
@@ -136,8 +137,8 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
 
         # print(f"full_bar_list: {full_bar_list}")
         # Table1
-        x_axis_loc = [0.4, 0.45, 0.65, 0.85, 0.955]
-        y_axis_loc = [0.55, 0.4, 0.52, 0.65, 0.5]
+        x_axis_loc = [0.42, 0.9]
+        y_axis_loc = [0.5, 0.6]
         for i in range(0,len(full_bar_list)):
                 # print(f"full_bar_list[i]: {full_bar_list[i]}, full_legend_lab_list[i]: {full_legend_lab_list[i]}")
                 # print(f"(i+1)*(1/len(full_bar_list)): {(i+1)*(1/len(full_bar_list))}")

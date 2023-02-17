@@ -1,0 +1,2 @@
+Revati	6	2. Rathnangi(*)	0.180	4. Vanaspati	0.213	8. Hanumatodi	0.213	10. Natakapriya	0.173	14. Vakulabharana	0.219	16. Chakravaka	0.188
+Hamsadwani	6	27. Sarasangi	0.186	29. Shankarabharana(*)	0.367	30. Naganandhini	0.180	63. Latangi	0.170	65. Kalyani(**)	0.274	66. Chitrambari	0.209
