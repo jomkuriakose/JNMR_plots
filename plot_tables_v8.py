@@ -121,7 +121,7 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
                 curr_end_position += between_bar_width
                 janya_label_list.append(janya_keys[i])
         
-        plt.title(f'LCSS Score of Janya Ragas with Janaka Ragas', fontweight ='bold', fontsize = 12)
+        # plt.title(f'LCSS Score of Janya Ragas with Janaka Ragas', fontweight ='bold', fontsize = 12)
         # Adding Xticks
         
         plt.xlabel('Janya Raga', fontweight ='bold', fontsize = 12)
