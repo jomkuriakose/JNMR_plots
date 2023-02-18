@@ -170,7 +170,7 @@ if __name__ == '__main__':
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, norm_janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_norm_color')
 
         # non-normalized plots
-        ylim = [0.0,1.0]
+        ylim = [0.0,0.8]
         # ylim = None
         legend_size = 12
         # legend_position = 'upper center'

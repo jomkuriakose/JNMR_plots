@@ -2,7 +2,7 @@
 Code to plot tables to normalized bar plot
 JNMR paper tables
 
-Histogram plots of single parent ragas
+Hindustani histogram plots2
 
 Author: Jom Kuriakose
 """
@@ -14,85 +14,9 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-# filename = 'tables/Table0_Test.txt'
-# Raga_name = None
-# parent_lab = "(*)"
-
-filename = 'tables/Table3and4.txt'
-Raga_name = None
+filename = 'tables_hindustani/Table_Behag.txt'
+Raga_name = "Behag"
 parent_lab = "(*)"
-
-# filename = 'tables/Table3_Aarabhi.txt'
-# Raga_name = "Aarabhi"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Khamboji.txt'
-# Raga_name = "Khamboji"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Anandabhairavi.txt'
-# Raga_name = "Anandabhairavi"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Begada.txt'
-# Raga_name = "Begada"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Khamas.txt'
-# Raga_name = "Khamas"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table4_Sriranjani.txt'
-# Raga_name = "Sriranjani"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table4_Chandrajyoti.txt'
-# Raga_name = "Chandrajyoti"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table4_Malahari.txt'
-# Raga_name = "Malahari"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table5_Hindola.txt'
-# Raga_name = "Hindola"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table5_Sunadavinodini.txt'
-# Raga_name = "Sunadavinodini"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table5_Madhyamavati.txt'
-# Raga_name = "Madhyamavati"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table5_Mohana.txt'
-# Raga_name = "Mohana"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table6_Revati.txt'
-# Raga_name = "Revati"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table6_Hamsadwani.txt'
-# Raga_name = "Hamsadwani"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table7_Gambhiranata.txt'
-# Raga_name = "Gambhiranata"
-# parent_lab = "(**)"
-
-# filename = 'tables/Table7_Amritavarshini.txt'
-# Raga_name = "Amritavarshini"
-# parent_lab = "(*)"
 
 # ----------------------------------------------------------------
 
@@ -108,9 +32,9 @@ bbox_shift = None
 plot_hline = False
 
 # set width of bar
-# barWidth = 0.18
+barWidth = 0.20
 # barWidth = 0.15
-barWidth = 0.12
+# barWidth = 0.12
 # barWidth = 0.10
 # barWidth = 0.08
 # bbox_shift = [1, 1]
@@ -118,7 +42,8 @@ barWidth = 0.12
 # set height and width of figure
 height = 4
 # height = 6
-width = 12
+# width = 5
+width = 5
 # width = 8
 # width = 10
 # width = 12
@@ -156,7 +81,7 @@ def read_table(filename):
 
 def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, file_name):
 
-        fig, ax = plt.subplots(figsize =(width, height))
+        fig = plt.subplots(figsize =(width, height))
 
         # Set position of bar on X axis
         br_list = []
@@ -188,26 +113,14 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
                                         barlist[j].set_hatch(sym_list[sym_counter])
                 sym_counter += 1
         
-        if not Raga_name == None:
-                plt.title(f'Distance of Raga {Raga_name} with Parent Ragas', fontweight ='bold', fontsize = 12)
-        else:
-                plt.title(f'Distance of Janya Ragas with Parent Ragas', fontweight ='bold', fontsize = 12)
+        plt.title(f'Distance of Raga {Raga_name} with Parent Ragas', fontweight ='bold', fontsize = 12)
         # Adding Xticks
         
-        plt.xlabel('Janya Raga', fontweight ='bold', fontsize = 12)
+        plt.xlabel('Distance Metric', fontweight ='bold', fontsize = 12)
         plt.ylabel('Distance Value', fontweight ='bold', fontsize = 12)
-        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya-Hellinger\nDistance", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 8)
-        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Janya: Aarabhi\nJanaka: 29. Shankarabharana", f"Janya: Khamboji\nJanaka: 28. Harikambhoji", f"Janya: Begada\nJanaka: 29. Shankarabharana", f"Janya: Khamas\nJanaka: 28. Harikambhoji", f"Janya: Sriranjani\nJanaka: 22. Kharaharapriya"], fontsize = 10)
-        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Janya:\nAarabhi\nJanaka:\n29. Shankarabharana", f"Janya:\nKhamboji\nJanaka:\n28. Harikambhoji", f"Janya:\nBegada\nJanaka:\n29. Shankarabharana", f"Janya:\nKhamas\nJanaka:\n28. Harikambhoji", f"Janya:\nSriranjani\nJanaka:\n22. Kharaharapriya"], fontsize = 12)
-        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Aarabhi", f"Khamboji", f"Begada", f"Khamas", f"Sriranjani"], fontsize = 12)
-
-        textstr_list = [f"29. Shankarabharana", f"28. Harikambhoji", f"29. Shankarabharana", f"28. Harikambhoji", f"22. Kharaharapriya"]
-        props = dict(boxstyle='square', facecolor='white', alpha=0.5)
-        # box_locs = [r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))]
-        box_locs = [0.01, 0.2, 0.4, 0.62, 0.8]
-        v_locs = [0.65, 0.47, 0.4, 0.36, 0.42]
-        for idx in range(0,len(box_locs)):
-                plt.text(box_locs[idx], v_locs[idx], textstr_list[idx], transform=ax.transAxes, fontsize=12, verticalalignment='top', bbox=props)
+        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya-Hellinger\nDistance", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 12)
+        # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya\nHellinger", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 12)
+        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya\nHellinger", f"D(kld)\nKL\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 12)
 
         if ylim:
                 plt.ylim(ylim[0], ylim[1])
@@ -238,13 +151,17 @@ if __name__ == '__main__':
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_color')
 
         # normalized plots
-        ylim = [0.0,1.0]
+        ylim = [0.0,1.1]
         # ylim = None
         legend_size = 12
         # legend_position = 'upper center'
         legend_position = 'upper right'
         # bbox_shift = [1.003, 1.01]
         bbox_shift = [1.0, 1.0]
+        # Gambhiranata
+        # bbox_shift = [1.25, 1.0]
+        # Amritavarshini
+        # bbox_shift = [1.2, 1.0]
         color_flag = False
         plot_hline = True
 
@@ -252,17 +169,22 @@ if __name__ == '__main__':
         color_flag = True
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, norm_janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_norm_color')
 
-        # normalized plots
-        ylim = [0.0,1.0]
+        # non-normalized plots
+        ylim = [0.0,0.8]
         # ylim = None
         legend_size = 12
         # legend_position = 'upper center'
         legend_position = 'upper right'
         # bbox_shift = [1.003, 1.01]
         bbox_shift = [1.0, 1.0]
+        # Gambhiranata
+        # bbox_shift = [1.25, 1.0]
+        # Amritavarshini
+        # bbox_shift = [1.22, 1.0]
         color_flag = False
         plot_hline = True
 
         plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm')
         color_flag = True
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_nonorm_color')
+
