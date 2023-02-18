@@ -36,13 +36,13 @@ plot_hline = False
 # barWidth = 0.15
 # barWidth = 0.12
 # barWidth = 0.10
-barWidth = 0.08
+barWidth = 0.09
 # bbox_shift = [1, 1]
 
 # set height and width of figure
 height = 4
 # height = 6
-width = 6
+width = 5.3
 # width = 8
 # width = 10
 # width = 12
@@ -128,7 +128,7 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
         textstr_list = [f"Kharaharapriya", f"Shankarabharana(*)"]
         props = dict(boxstyle='square', facecolor='white', alpha=0.5)
         # box_locs = [r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))]
-        box_locs = [0.03, 0.6]
+        box_locs = [0.03, 0.56]
         v_locs = [0.45, 0.45]
         for idx in range(0,len(box_locs)):
                 plt.text(box_locs[idx], v_locs[idx], textstr_list[idx], transform=ax.transAxes, fontsize=12, verticalalignment='top', bbox=props)
