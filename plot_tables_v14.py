@@ -14,85 +14,9 @@ import matplotlib.colors as mcolors
 
 # ----------------------------------------------------------------
 
-# filename = 'tables/Table0_Test.txt'
-# Raga_name = None
-# parent_lab = "(*)"
-
-filename = 'tables/Table3and4.txt'
+filename = 'tables_hindustani/Table_2ragas.txt'
 Raga_name = None
 parent_lab = "(*)"
-
-# filename = 'tables/Table3_Aarabhi.txt'
-# Raga_name = "Aarabhi"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Khamboji.txt'
-# Raga_name = "Khamboji"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Anandabhairavi.txt'
-# Raga_name = "Anandabhairavi"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Begada.txt'
-# Raga_name = "Begada"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table3_Khamas.txt'
-# Raga_name = "Khamas"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table4_Sriranjani.txt'
-# Raga_name = "Sriranjani"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table4_Chandrajyoti.txt'
-# Raga_name = "Chandrajyoti"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table4_Malahari.txt'
-# Raga_name = "Malahari"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table5_Hindola.txt'
-# Raga_name = "Hindola"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table5_Sunadavinodini.txt'
-# Raga_name = "Sunadavinodini"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table5_Madhyamavati.txt'
-# Raga_name = "Madhyamavati"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table5_Mohana.txt'
-# Raga_name = "Mohana"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table6_Revati.txt'
-# Raga_name = "Revati"
-# parent_lab = "(*)"
-
-# filename = 'tables/Table6_Hamsadwani.txt'
-# Raga_name = "Hamsadwani"
-# parent_lab = "(*)"
-
-# ----------------------------------------------------------------
-
-# filename = 'tables/Table7_Gambhiranata.txt'
-# Raga_name = "Gambhiranata"
-# parent_lab = "(**)"
-
-# filename = 'tables/Table7_Amritavarshini.txt'
-# Raga_name = "Amritavarshini"
-# parent_lab = "(*)"
 
 # ----------------------------------------------------------------
 
@@ -110,15 +34,15 @@ plot_hline = False
 # set width of bar
 # barWidth = 0.18
 # barWidth = 0.15
-barWidth = 0.12
+# barWidth = 0.12
 # barWidth = 0.10
-# barWidth = 0.08
+barWidth = 0.08
 # bbox_shift = [1, 1]
 
 # set height and width of figure
 height = 4
 # height = 6
-width = 12
+width = 6
 # width = 8
 # width = 10
 # width = 12
@@ -199,13 +123,13 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
         # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"D(e)\nEuclidean\nDistance", f"D(bh)\nBhattacharya-Hellinger\nDistance", f"D(kld)\nKullback-Leiber\nDivergence", f"D(js)\nJensen-Shannon\nDistance"], fontsize = 8)
         # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Janya: Aarabhi\nJanaka: 29. Shankarabharana", f"Janya: Khamboji\nJanaka: 28. Harikambhoji", f"Janya: Begada\nJanaka: 29. Shankarabharana", f"Janya: Khamas\nJanaka: 28. Harikambhoji", f"Janya: Sriranjani\nJanaka: 22. Kharaharapriya"], fontsize = 10)
         # plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Janya:\nAarabhi\nJanaka:\n29. Shankarabharana", f"Janya:\nKhamboji\nJanaka:\n28. Harikambhoji", f"Janya:\nBegada\nJanaka:\n29. Shankarabharana", f"Janya:\nKhamas\nJanaka:\n28. Harikambhoji", f"Janya:\nSriranjani\nJanaka:\n22. Kharaharapriya"], fontsize = 12)
-        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Aarabhi", f"Khamboji", f"Begada", f"Khamas", f"Sriranjani"], fontsize = 12)
+        plt.xticks([r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))], [f"Bageshri", f"Behag"], fontsize = 12)
 
-        textstr_list = [f"29. Shankarabharana", f"28. Harikambhoji", f"29. Shankarabharana", f"28. Harikambhoji", f"22. Kharaharapriya"]
+        textstr_list = [f"Kharaharapriya", f"Shankarabharana(*)"]
         props = dict(boxstyle='square', facecolor='white', alpha=0.5)
         # box_locs = [r + barWidth*(len(janaka_list)-1)/2 for r in range(len(janaka_list[list(janaka_list.keys())[0]]))]
-        box_locs = [0.01, 0.2, 0.4, 0.62, 0.8]
-        v_locs = [0.5, 0.35, 0.3, 0.26, 0.32]
+        box_locs = [0.03, 0.6]
+        v_locs = [0.45, 0.45]
         for idx in range(0,len(box_locs)):
                 plt.text(box_locs[idx], v_locs[idx], textstr_list[idx], transform=ax.transAxes, fontsize=12, verticalalignment='top', bbox=props)
 
@@ -238,7 +162,7 @@ if __name__ == '__main__':
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_color')
 
         # normalized plots
-        ylim = [0.0,1.4]
+        ylim = [0.0,1.0]
         # ylim = None
         legend_size = 12
         # legend_position = 'upper center'
@@ -253,7 +177,7 @@ if __name__ == '__main__':
         plot_figure(barWidth, height, width, sym_list, color_list_new, color_flag, norm_janaka_list, Raga_name, ylim, legend_size, legend_position, bbox_shift, plot_hline, 'plots/'+file_name[0]+'_norm_color')
 
         # normalized plots
-        ylim = [0.0,1.4]
+        ylim = [0.0,1.0]
         # ylim = None
         legend_size = 12
         # legend_position = 'upper center'
