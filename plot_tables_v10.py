@@ -2,7 +2,7 @@
 Code to plot tables to normalized bar plot
 JNMR paper tables
 
-Histogram plots of LCSS tables
+Histogram plots of LCSS table 4
 
 Author: Jom Kuriakose
 """
@@ -124,7 +124,7 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
         # Adding Xticks
         
         plt.xlabel('Janya Raga', fontweight ='bold', fontsize = 12)
-        plt.ylabel('LCSS Distance', fontweight ='bold', fontsize = 12)
+        plt.ylabel('LCSS Score', fontweight ='bold', fontsize = 12)
         plt.xticks(xaxis_list, janya_label_list, fontsize = 12)
 
         if ylim:

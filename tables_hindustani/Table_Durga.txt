@@ -1,0 +1,5 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+Kharaharapriya(*)	0.155	0.226	0.033	0.064
+Gourimanohari	0.149	0.261	0.044	0.085
+Harikambhoji	0.155	0.28	0.052	0.097
+Shankarabharana	0.235	0.406	0.113	0.198

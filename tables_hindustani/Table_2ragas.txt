@@ -1,0 +1,5 @@
+Raga	Bageshri	Behag
+D(e) - Euclidean Distance	0.200	0.099
+D(bh) - Bhattacharya-Hellinger Distance	0.291	0.176
+D(kld) - Kullback-Leiber Divergence	0.056	0.020
+D(js) - Jensen-Shannon Distance	0.105	0.039

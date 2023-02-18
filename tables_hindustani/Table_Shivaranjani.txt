@@ -1,0 +1,5 @@
+Raga	D(e)	D(bh)	D(kld)	D(js)
+Kharaharapriya(*)	0.143	0.265	0.047	0.086
+Gourimanohari	0.146	0.301	0.062	0.109
+Hemavati	0.217	0.321	0.067	0.128
+Dharmavati	0.154	0.27	0.047	0.091
