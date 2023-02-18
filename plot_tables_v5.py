@@ -191,7 +191,7 @@ def plot_figure(barWidth, height, width, sym_list, color_list, color_flag, janak
         if not Raga_name == None:
                 plt.title(f'Distance of Raga {Raga_name} with Parent Ragas', fontweight ='bold', fontsize = 12)
         else:
-                plt.title(f'Distance of Janya Ragas with Parent Ragas', fontweight ='bold', fontsize = 12)
+                plt.title(f'Janya Ragas with only one possible Parent Raga', fontweight ='bold', fontsize = 12)
         # Adding Xticks
         
         plt.xlabel('Janya Raga', fontweight ='bold', fontsize = 12)
