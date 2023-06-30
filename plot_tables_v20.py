@@ -2,7 +2,7 @@
 Code to plot tables to normalized bar plot
 JNMR paper tables
 
-Initial histogram plots
+Transcription histograms
 
 Author: Jom Kuriakose
 """
